@@ -12,7 +12,7 @@ class SearchBar extends Component {
     return (
       <div className="search-bar">
       <form action="">
-        <input type="text" placeholder="Enter a movie..." onChange={this.props.onChange} value={this.props.text}/>
+        <input type="text" placeholder="Enter a movie..." onChange={(e) => this.props.updateSearchBar(e.target.value)} value={this.props.text}/>
         <button type="submit">Go!</button>
       </form>
       </div>
