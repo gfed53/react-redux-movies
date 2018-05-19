@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux'
+
 // Controls text within search bar.
 export const searchBarText = (state='',action) => {
   switch (action.type){
@@ -7,3 +9,7 @@ export const searchBarText = (state='',action) => {
       return state;
   }
 }
+
+export default combineReducers({
+  searchBarText
+})
