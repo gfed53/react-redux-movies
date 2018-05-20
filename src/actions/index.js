@@ -1,13 +1,6 @@
+import * as types from '../constants/ActionTypes'
+
 export const updateSearchBar = text => ({
-  type: 'UPDATE',
+  type: types.UPDATE,
   payload: text
 });
-
-// export const updateSearchBar = dispatch => {
-
-//   dispatch({
-//     type: 'UPDATE',
-//     payload: text
-//   })
-  
-// };

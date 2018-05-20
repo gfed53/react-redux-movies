@@ -10,6 +10,8 @@ export const searchBarText = (state='',action) => {
   }
 }
 
+
+
 export default combineReducers({
   searchBarText
 })
