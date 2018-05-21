@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import * as types from '../constants/ActionTypes';
 
+import * as ApiReducers from './ApiReducers';
+
 const initialState = {
   searchBarText: ''
 }
@@ -29,5 +31,6 @@ export const pastQueries = (state = [], action) => {
 
 export default combineReducers({
   searchBarText,
-  pastQueries
-})
+  pastQueries,
+  ...ApiReducers
+});
