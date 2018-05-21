@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
-import { updateSearchBar } from '../actions';
+import { updateSearchBar, updateQueries } from '../actions';
 import SearchBar from '../components/SearchBar';
 
 
@@ -11,7 +11,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  updateSearchBar: text => dispatch(updateSearchBar(text))
+  updateSearchBar: text => dispatch(updateSearchBar(text)),
+  updateQueries: text => dispatch(updateQueries(text))
 })
 
 export default connect(

@@ -1,10 +1,25 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
+import * as types from '../constants/ActionTypes';
+
+const initialState = {
+  searchBarText: ''
+}
 
 // Controls text within search bar.
-export const searchBarText = (state='',action) => {
+export const searchBarText = (state = '',action) => {
   switch (action.type){
-    case 'UPDATE':
+    case types.UPDATE_SEARCH_BAR:
       return action.payload;
+    default:
+      return state;
+  }
+}
+
+// Keeps track of previous searches.
+export const pastQueries = (state = [], action) => {
+  switch (action.type){
+    case types.UPDATE_QUERY_LIST:
+      return [...state, action.payload];
     default:
       return state;
   }
@@ -13,5 +28,6 @@ export const searchBarText = (state='',action) => {
 
 
 export default combineReducers({
-  searchBarText
+  searchBarText,
+  pastQueries
 })

@@ -1,1 +1,2 @@
-export const UPDATE = 'UPDATE';
+export const UPDATE_SEARCH_BAR = 'UPDATE_SEARCH_BAR';
+export const UPDATE_QUERY_LIST = 'UPDATE_QUERY_LIST';
