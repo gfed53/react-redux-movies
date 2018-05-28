@@ -12,7 +12,7 @@ class SearchBar extends Component {
   handleSubmit(e){
     e.preventDefault();
 
-    this.props.fetchMovieResults();
+    this.props.fetchMovieResults(this.props.text);
     this.props.updateQueries(this.props.text);
     this.props.updateSearchBar('');
   }

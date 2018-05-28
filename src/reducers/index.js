@@ -4,7 +4,12 @@ import * as types from '../constants/ActionTypes';
 import * as ApiReducers from './ApiReducers';
 
 const initialState = {
-  searchBarText: ''
+  searchBarText: '',
+  searchParams: {
+    dateFrom: null,
+    dateTo: null,
+    genres: []
+  }
 }
 
 // Controls text within search bar.
@@ -14,6 +19,17 @@ export const searchBarText = (state = '',action) => {
       return action.payload;
     default:
       return state;
+  }
+}
+
+export const searchParams = (state = initialState.searchParams, action) => {
+  switch (action.type){
+    case types.UPDATE_DATE_FROM:
+      return {...state, dateFrom: action.payload};
+    case types.UPDATE_DATE_TO:
+      return {...state, dateTo: action.payload};
+    case types.UPDATE_GENRES:
+      return {...state, genres: action.payload};
   }
 }
 
