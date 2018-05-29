@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as types from '../constants/ActionTypes';
-import { KEYS } from '../temp-config';
+// import { KEYS } from '../temp-config';
 // import { updateMovieResults } from './ApiActions';
 
 export const updateSearchBar = text => ({
@@ -18,17 +18,18 @@ export const fetchMovieResults = text => dispatch => {
   // axios.get(`https://api.themoviedb.org/3/search/movie/?api_key=${KEYS.tmdbv3}&query=${text}`)
   // axios.get(`https://api.themoviedb.org/3/movie/76341?api_key=${KEYS.tmdbv3}`)
   // axios.get(`https://api.themoviedb.org/3/search/movie/?api_key=${KEYS.tmdbv3}`)
-  // axios.get(`http://localhost:8000/api/get-movie/`)
-  // .then((res) => res.data)
-  // .then((movies) => dispatch({
-  //   type: types.FETCH_MOVIE_RESULTS,
-  //   payload: movies
-  // }));
 
-  dispatch({
+  axios.get(`http://localhost:8000/api/get-movie/`)
+  .then((res) => res.data)
+  .then((movies) => dispatch({
     type: types.FETCH_MOVIE_RESULTS,
-    payload: {'name': 'Goodfellas', 'year': 1990}
-  });
+    payload: movies
+  }));
+
+  // dispatch({
+  //   type: types.FETCH_MOVIE_RESULTS,
+  //   payload: {'name': 'Goodfellas', 'year': 1990}
+  // });
 
 }
 

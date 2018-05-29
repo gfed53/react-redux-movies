@@ -9,12 +9,17 @@ import './index.css';
 import App from './App.jsx';
 import registerServiceWorker from './registerServiceWorker';
 
+import { fetchMovieGenres } from './actions';
+
 const middleware = [ thunk ];
 
 const store = createStore(
   reducer,
   applyMiddleware(...middleware)
 );
+
+// Grab list of genres from API on startup. Mock results for now.
+store.dispatch(fetchMovieGenres());
 
 render(
   <Provider store={store}>

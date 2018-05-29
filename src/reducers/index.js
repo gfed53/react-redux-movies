@@ -5,10 +5,11 @@ import * as ApiReducers from './ApiReducers';
 
 const initialState = {
   searchBarText: '',
+  
   searchParams: {
     dateFrom: null,
     dateTo: null,
-    genres: []
+    selectedGenres: []
   }
 }
 
@@ -22,6 +23,8 @@ export const searchBarText = (state = '',action) => {
   }
 }
 
+
+
 export const searchParams = (state = initialState.searchParams, action) => {
   switch (action.type){
     case types.UPDATE_DATE_FROM:
@@ -29,7 +32,7 @@ export const searchParams = (state = initialState.searchParams, action) => {
     case types.UPDATE_DATE_TO:
       return {...state, dateTo: action.payload};
     case types.UPDATE_GENRES:
-      return {...state, genres: action.payload};
+      return {...state, selectedGenres: action.payload};
   }
 }
 

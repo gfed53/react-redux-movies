@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import { updateSearchBar, updateQueries, fetchMovieResults } from '../actions';
 import Search from '../components/Search';
