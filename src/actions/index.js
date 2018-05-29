@@ -14,11 +14,7 @@ export const updateQueries = text => ({
 });
 
 export const fetchMovieResults = text => dispatch => {
-  // Mock GET request
-  // axios.get(`https://api.themoviedb.org/3/search/movie/?api_key=${KEYS.tmdbv3}&query=${text}`)
-  // axios.get(`https://api.themoviedb.org/3/movie/76341?api_key=${KEYS.tmdbv3}`)
-  // axios.get(`https://api.themoviedb.org/3/search/movie/?api_key=${KEYS.tmdbv3}`)
-
+  // GET request (mock data)
   axios.get(`http://localhost:8000/api/get-movie/`)
   .then((res) => res.data)
   .then((movies) => dispatch({

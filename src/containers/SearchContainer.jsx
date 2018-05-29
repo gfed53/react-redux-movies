@@ -7,7 +7,10 @@ import Search from '../components/Search';
 
 const mapStateToProps = state => {
   console.log('state',state);
-  return ({ text: state.searchBarText })
+  return ({ 
+    text: state.searchBarText,
+    movieGenres: state.movieGenres
+   })
 }
 
 const mapDispatchToProps = dispatch => ({
