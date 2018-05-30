@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 import * as types from '../constants/ActionTypes';
 
 import * as ApiReducers from './ApiReducers';
@@ -49,6 +50,7 @@ export const pastQueries = (state = [], action) => {
 
 
 export default combineReducers({
+  form: formReducer,
   searchBarText,
   pastQueries,
   ...ApiReducers
