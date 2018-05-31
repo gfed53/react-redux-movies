@@ -1,0 +1,16 @@
+.date label {
+  display: inline-block;
+  min-width: 5em;
+}
+
+.btn.btn-submit {
+  margin: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  border: 1px solid lightgrey;
+  padding: 0.35em 0.95em;
+  background: white;
+}

@@ -24,8 +24,6 @@ export const searchBarText = (state = '',action) => {
   }
 }
 
-
-
 export const searchParams = (state = initialState.searchParams, action) => {
   switch (action.type){
     case types.UPDATE_DATE_FROM:
@@ -46,8 +44,6 @@ export const pastQueries = (state = [], action) => {
       return state;
   }
 }
-
-
 
 export default combineReducers({
   form: formReducer,
