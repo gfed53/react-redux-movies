@@ -25,7 +25,7 @@ export const SearchForm = props => {
         {genres.map((genre) => (
           <div key={genre.id} className="genre">
             <label htmlFor={genre.name}>{genre.name}</label>
-            <Field name="genre" component="input" type="checkbox" value={genre.id} />
+            <Field name="genres" component="input" type="checkbox" value={genre.id} />
           </div>
         ))}
         

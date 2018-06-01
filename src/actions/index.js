@@ -30,9 +30,21 @@ export const fetchMovieResults = text => dispatch => {
 }
 
 export const fetchMovieGenres = () => dispatch => {
-  // Need to get back genres from the API. Mock for now
+  // Mock (until we get polling)
   dispatch({
     type: types.FETCH_MOVIE_GENRES,
-    payload: [{'id': 28, 'name': 'Action'}, {'id': 1, 'name': 'Romance'}, {'id': 3, 'name': 'Fantasy'}]
+    payload: [{'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'}]
   });
+
+  // Works!
+  // axios.get('http://localhost:8000/api/get-movie-genres')
+  // .then((res) => {
+  //   console.log('res',res);
+  //   return res.data.genres;
+  // })
+  // .then((genres) => dispatch({
+  //   type: types.FETCH_MOVIE_GENRES,
+  //   payload: genres
+  // }));
+
 }
