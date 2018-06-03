@@ -1,11 +1,17 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+import CheckboxGroup from './CheckboxGroup.jsx';
+
 import './SearchForm.css';
 
 export const SearchForm = props => {
   const { handleSubmit, genres } = props;
   const yearNow = new Date().getFullYear();
+  const genreOptions = genres.map(genre => ({
+    value: genre.id,
+    label: genre.name
+  }));
 
   return (
     <form onSubmit={handleSubmit}>
@@ -22,13 +28,7 @@ export const SearchForm = props => {
       </div>
       <div className="genres-container">
         <h3>By Genre:</h3>
-        {genres.map((genre) => (
-          <div key={genre.id} className="genre">
-            <label htmlFor={genre.name}>{genre.name}</label>
-            <Field name="genres" component="input" type="checkbox" value={genre.id} />
-          </div>
-        ))}
-        
+        <CheckboxGroup name="genres" options={genreOptions} />
       </div>
       <button className="btn btn-submit" type="submit">Go!</button>
     </form>
