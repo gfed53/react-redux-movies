@@ -6,17 +6,14 @@ import Search from '../components/Search';
 
 
 const mapStateToProps = state => {
-  console.log('state',state);
+  // console.log('state',state);
   return ({ 
-    text: state.searchBarText,
     movieGenres: state.movieGenres
    })
 }
 
 const mapDispatchToProps = dispatch => ({
-  updateSearchBar: text => dispatch(updateSearchBar(text)),
-  updateQueries: text => dispatch(updateQueries(text)),
-  fetchMovieResults: text => dispatch(fetchMovieResults(text))
+  fetchMovieResults: params => dispatch(fetchMovieResults(params))
 })
 
 export default connect(

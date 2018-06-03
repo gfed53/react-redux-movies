@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import SearchFormContainer from '../containers/SearchFormContainer';
+
 class Search extends Component {
 
   constructor(props){
     super(props);
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount(){
@@ -15,48 +17,34 @@ class Search extends Component {
     console.log('yearNow',yearNow);
   }
 
-  handleSubmit(e){
-    e.preventDefault();
+  // handleSubmit(e){
+  //   e.preventDefault();
 
-    this.props.fetchMovieResults(this.props.text);
-    this.props.updateQueries(this.props.text);
-    this.props.updateSearchBar('');
+  //   this.props.fetchMovieResults(this.props.text);
+  //   this.props.updateQueries(this.props.text);
+  //   this.props.updateSearchBar('');
+  // }
+
+  submit = values => {
+    console.log('values',values);
+      this.props.fetchMovieResults(values);
   }
 
-  renderGenreOptions(){
-    return this.props.movieGenres.map(genre => (
-      <div key={genre.id} className="genre-container">
-        <label htmlFor="genre">{genre.name}</label>
-        <input name="genre" value={genre.id} type="checkbox"/>
-      </div>
-    ))
-  }
+  // renderGenreOptions(){
+  //   return this.props.movieGenres.map(genre => (
+  //     <div key={genre.id} className="genre-container">
+  //       <label htmlFor="genre">{genre.name}</label>
+  //       <input name="genre" value={genre.id} type="checkbox"/>
+  //     </div>
+  //   ))
+  // }
 
 
   render() {
-    const yearNow = new Date().getFullYear();
     return (
-      <div className="search-bar">
-      <form action="" onSubmit={this.handleSubmit}>
-        <h3>Filter By..</h3>
-        <div className="dates-container">
-          <p>Release Date</p>
-          <div className="date-container">
-            <label htmlFor="date-from">From</label>
-            <input name="date-from" type="number" min="1900" max={yearNow}/>
-          </div>
-          <div className="date-container">
-            <label htmlFor="date-to">To</label>
-            <input name="date-to" type="number" min="1900" max={yearNow}/>
-          </div>
-        </div>
-        <div className="genres-container">
-          <p>Genre(s)</p>
-          {this.renderGenreOptions()}
-        </div>
-        <button type="submit">Go!</button>
-      </form>
-      </div>
+      <section id="section-search">
+        <SearchFormContainer onSubmit={this.submit} />
+      </section>
     );
   }
 }

@@ -13,19 +13,20 @@ export const updateQueries = text => ({
   payload: text
 });
 
-export const fetchMovieResults = text => dispatch => {
+export const fetchMovieResults = params => dispatch => {
+  console.log('params in action',params);
   // GET request (mock data)
-  axios.get(`http://localhost:8000/api/get-movie/`)
-  .then((res) => res.data)
-  .then((movies) => dispatch({
-    type: types.FETCH_MOVIE_RESULTS,
-    payload: movies
-  }));
-
-  // dispatch({
+  // axios.get(`http://localhost:8000/api/get-movie/`)
+  // .then((res) => res.data)
+  // .then((movies) => dispatch({
   //   type: types.FETCH_MOVIE_RESULTS,
-  //   payload: {'name': 'Goodfellas', 'year': 1990}
-  // });
+  //   payload: movies
+  // }));
+
+  dispatch({
+    type: types.FETCH_MOVIE_RESULTS,
+    payload: {'status': 'params received', 'params': params}
+  });
 
 }
 
