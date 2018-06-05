@@ -13,8 +13,6 @@ class Search extends Component {
 
   componentDidMount(){
     // console.log('this.props',this.props);
-    const yearNow = new Date().getFullYear();
-    console.log('yearNow',yearNow);
   }
 
   // handleSubmit(e){
@@ -27,7 +25,7 @@ class Search extends Component {
 
   submit = values => {
     console.log('values',values);
-      this.props.fetchMovieResults(values);
+    this.props.fetchMovieResults(values);
   }
 
   // renderGenreOptions(){

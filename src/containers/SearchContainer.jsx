@@ -7,6 +7,7 @@ import Search from '../components/Search';
 
 const mapStateToProps = state => {
   // console.log('state',state);
+  console.log('movie results',state.movieResults);
   return ({ 
     movieGenres: state.movieGenres
    })

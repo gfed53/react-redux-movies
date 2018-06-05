@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as types from '../constants/ActionTypes';
-// import { KEYS } from '../temp-config';
-// import { updateMovieResults } from './ApiActions';
+
+import * as ApiActions from './ApiActions';
 
 export const updateSearchBar = text => ({
   type: types.UPDATE_SEARCH_BAR,
@@ -16,17 +16,19 @@ export const updateQueries = text => ({
 export const fetchMovieResults = params => dispatch => {
   console.log('params in action',params);
   // GET request (mock data)
-  // axios.get(`http://localhost:8000/api/get-movie/`)
-  // .then((res) => res.data)
-  // .then((movies) => dispatch({
-  //   type: types.FETCH_MOVIE_RESULTS,
-  //   payload: movies
-  // }));
-
-  dispatch({
+  axios.post(`http://localhost:8000/api/get-movies/`, {
+    params
+  })
+  .then((res) => res.data.tmdb_results.results)
+  .then((movies) => dispatch({
     type: types.FETCH_MOVIE_RESULTS,
-    payload: {'status': 'params received', 'params': params}
-  });
+    payload: movies
+  }));
+
+  // dispatch({
+  //   type: types.FETCH_MOVIE_RESULTS,
+  //   payload: {'status': 'received', 'data': params}
+  // });
 
 }
 
