@@ -12,8 +12,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Find some movies!</h1>
+      <div className="container App">
+        <header className="App-header">
+          <h1>Search for movies!</h1>
+        </header>
         <SearchContainer />
       </div>
     );

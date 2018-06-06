@@ -1,9 +1,16 @@
+h3 {
+  margin: 1em 0.5em;
+}
+
 .date label {
   display: inline-block;
   min-width: 5em;
 }
 
+
+
 .btn.btn-submit {
+  transition: .15s ease-in-out all;
   margin: 1em;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -12,5 +19,10 @@
   font-size: 1.2em;
   border: 1px solid lightgrey;
   padding: 0.35em 0.95em;
-  background: white;
+  background: #7272ff;
+  color: white
+}
+
+.btn.btn-submit:hover {
+  background: #5454b3;
 }

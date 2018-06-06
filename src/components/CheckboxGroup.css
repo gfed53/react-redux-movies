@@ -1,3 +1,7 @@
 .checkbox-group-item {
   display: block;
 }
+
+input {
+  margin-right: 7px;
+}
