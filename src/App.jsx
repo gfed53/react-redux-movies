@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 import SearchContainer from './containers/SearchContainer';
-import SearchFormContainer from './containers/SearchFormContainer';
+import ResultsContainer from './containers/ResultsContainer';
+// import SearchFormContainer from './containers/SearchFormContainer';
+
+// import { Results } from './components/Results';
 
 class App extends Component {
 
@@ -17,6 +20,7 @@ class App extends Component {
           <h1>Search for movies!</h1>
         </header>
         <SearchContainer />
+        <ResultsContainer />
       </div>
     );
   }

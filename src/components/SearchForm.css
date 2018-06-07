@@ -8,7 +8,7 @@
 }
 
 .btn-container {
-  text-align: center;
+  text-align: right;
 }
 
 .date label {
@@ -28,10 +28,11 @@
   font-size: 1.2em;
   border: 1px solid lightgrey;
   padding: 0.35em 0.95em;
-  background: #7272ff;
+  /* background: #7272ff; */
+  background: #007bff;
   color: white
 }
 
 .btn.btn-submit:hover {
-  background: #5454b3;
+  background: #006ce0;
 }

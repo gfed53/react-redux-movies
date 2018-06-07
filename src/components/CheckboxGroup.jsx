@@ -44,7 +44,7 @@ export default class CheckboxGroup extends Component {
 
     return (
       <div>
-        <div>{checkboxes}</div>
+        <div className="checkbox-group-container">{checkboxes}</div>
         {touched && error && <p className="error">{error}</p>}
       </div>
     );

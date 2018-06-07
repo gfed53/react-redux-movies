@@ -36,7 +36,12 @@ export const fetchMovieGenres = () => dispatch => {
   // Mock (until we get polling)
   dispatch({
     type: types.FETCH_MOVIE_GENRES,
-    payload: [{'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'}]
+    payload: [
+      {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'},
+      // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'},
+      // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'},
+      // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'}
+    ]
   });
 
   // Works!

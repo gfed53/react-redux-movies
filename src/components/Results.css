@@ -1,0 +1,14 @@
+.result-main h4 {
+  margin: 0.5em;
+}
+
+.result-content-right {
+  text-align: right;
+}
+
+.result-content-right p {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0.2em;
+}

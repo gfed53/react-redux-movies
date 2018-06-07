@@ -21,11 +21,11 @@ export const SearchForm = props => {
         </div>
         <div className="col-8">
           <div className="row align-items-center justify-content-center">
-            <div className="col-3 date">
+            <div className="col-sm-12 col-md-3 date">
               <label htmlFor="dateFrom">From:</label>
               <Field name="dateFrom" component="input" type="number" min="1900" max={yearNow} />
             </div>
-            <div className="col-3 date">
+            <div className="col-sm-12 col-md-3 date">
               <label htmlFor="dateTo">To:</label>
               <Field name="dateTo" component="input" type="number" min="1900" max={yearNow} />
             </div>
