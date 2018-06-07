@@ -1,5 +1,14 @@
-h3 {
+/* h3 {
   margin: 1em 0.5em;
+} */
+
+.dates-container,
+.genres-container {
+  margin: 1em 0;
+}
+
+.btn-container {
+  text-align: center;
 }
 
 .date label {

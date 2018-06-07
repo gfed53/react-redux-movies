@@ -15,22 +15,35 @@ export const SearchForm = props => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="dates-container">
-        <h3>By Date:</h3>
-        <div className="date">
-          <label htmlFor="dateFrom">From:</label>
-          <Field name="dateFrom" component="input" type="number" min="1900" max={yearNow} />
+      <div className="row align-items-center justify-content-center dates-container">
+        <div className="col-4">
+          <h3>By Date:</h3>
         </div>
-        <div className="date">
-          <label htmlFor="dateTo">To:</label>
-          <Field name="dateTo" component="input" type="number" min="1900" max={yearNow} />
+        <div className="col-8">
+          <div className="row align-items-center justify-content-center">
+            <div className="col-3 date">
+              <label htmlFor="dateFrom">From:</label>
+              <Field name="dateFrom" component="input" type="number" min="1900" max={yearNow} />
+            </div>
+            <div className="col-3 date">
+              <label htmlFor="dateTo">To:</label>
+              <Field name="dateTo" component="input" type="number" min="1900" max={yearNow} />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="genres-container">
-        <h3>By Genre:</h3>
-        <CheckboxGroup name="genres" options={genreOptions} />
+      <div className="row align-items-center justify-content-between genres-container">
+        <div className="col-4">
+          <h3>By Genre:</h3>
+        </div>
+        <div className="col-8">
+          <CheckboxGroup name="genres" options={genreOptions} />
+        </div>
       </div>
-      <button className="btn btn-submit" type="submit">Go!</button>
+      <div className="btn-container">
+        <button className="btn btn-submit" type="submit">Go!</button>
+      </div>
+      
     </form>
   )
 }
