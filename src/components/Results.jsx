@@ -27,7 +27,7 @@ export const Results = props => {
   
 
   return (
-    <div>
+    <div className="container results-container">
       {/* <h1>Results!</h1> */}
       {props.results.map(result => (
       <div className="result-main">

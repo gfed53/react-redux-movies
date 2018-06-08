@@ -2,6 +2,10 @@
   margin: 1em 0.5em;
 } */
 
+.form-search {
+  padding: 1em;
+}
+
 .dates-container,
 .genres-container {
   margin: 1em 0;
@@ -11,9 +15,14 @@
   text-align: right;
 }
 
+.date {
+  white-space: nowrap;
+}
+
 .date label {
   display: inline-block;
-  min-width: 5em;
+  margin-right: 1em;
+  width: 5em;
 }
 
 
@@ -35,4 +44,10 @@
 
 .btn.btn-submit:hover {
   background: #006ce0;
+}
+
+@media screen and (min-width: 768px){
+  .date label {
+    width: auto;
+  }
 }

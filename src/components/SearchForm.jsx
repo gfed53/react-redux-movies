@@ -14,18 +14,18 @@ export const SearchForm = props => {
   }));
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="row align-items-center justify-content-center dates-container">
-        <div className="col-4">
+    <form className="form-search" onSubmit={handleSubmit}>
+      <div className="row align-items-center justify-content-between dates-container">
+        <div className="col-sm-6 col-md-3">
           <h3>By Date:</h3>
         </div>
-        <div className="col-8">
-          <div className="row align-items-center justify-content-center">
-            <div className="col-sm-12 col-md-3 date">
+        <div className="col-sm-6 col-md-8">
+          <div className="row align-items-center">
+            <div className="col-sm-12 col-md-4 col-lg-3 date">
               <label htmlFor="dateFrom">From:</label>
               <Field name="dateFrom" component="input" type="number" min="1900" max={yearNow} />
             </div>
-            <div className="col-sm-12 col-md-3 date">
+            <div className="col-sm-12 col-md-4 col-lg-3 date">
               <label htmlFor="dateTo">To:</label>
               <Field name="dateTo" component="input" type="number" min="1900" max={yearNow} />
             </div>
@@ -33,10 +33,10 @@ export const SearchForm = props => {
         </div>
       </div>
       <div className="row align-items-center justify-content-between genres-container">
-        <div className="col-4">
+        <div className="col-sm-6 col-md-3">
           <h3>By Genre:</h3>
         </div>
-        <div className="col-8">
+        <div className="col-sm-6 col-md-8">
           <CheckboxGroup name="genres" options={genreOptions} />
         </div>
       </div>
