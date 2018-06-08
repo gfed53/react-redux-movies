@@ -12,10 +12,13 @@ export const Results = props => {
       <div className="result-main">
         <h4>{result.title}</h4>
         <div className="row">
-          <div className="col-6">
+          <div className="col-4">
+            <img className="result-image" src={`https://image.tmdb.org/t/p/w500${result.poster_path}`} alt="movie image"/>
+          </div>
+          <div className="col-4">
             <p>{result.overview}</p>
           </div>
-          <div className="col-6">
+          <div className="col-4">
             <p>{result.release_date}</p>
             <p>Rating: {result.vote_average}</p>
             <p>Votes: {result.vote_count}</p>
@@ -33,10 +36,13 @@ export const Results = props => {
       <div className="result-main">
         <h4>{result.title}</h4>
         <div className="row">
-          <div className="col-6">
+        <div className="col-sm-6 col-md-4">
+          <img className="result-image" src={`https://image.tmdb.org/t/p/w500${result.poster_path}`} alt="movie image"/>
+        </div>
+          <div className="col-sm-6 col-md-4">
             <p>{result.overview}</p>
           </div>
-          <div className="col-6 result-content-right">
+          <div className="col-sm-6 col-md-4 result-content-right">
             <p>{result.release_date}</p>
             <p>Rating: {result.vote_average}</p>
             <p>Votes: {result.vote_count}</p>

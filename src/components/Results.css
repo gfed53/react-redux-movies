@@ -3,11 +3,18 @@
 }
 
 .result-main {
-  margin: 2em 1em;
+  margin: 3em 1em;
 }
 
 .result-main h4 {
-  margin: 0.5em;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-bottom: 1px solid lightgray;
+}
+
+.result-image {
+  width: 10em;
+  box-shadow: 1px 1px 1px black;
 }
 
 .result-content-right {
