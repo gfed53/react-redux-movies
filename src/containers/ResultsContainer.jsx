@@ -10,11 +10,6 @@ const mapStateToProps = state => ({
   results: state.movieResults
 })
 
-// const mapDispatchToProps = dispatch => ({
-//   fetchMovieResults: params => dispatch(fetchMovieResults(params))
-// })
-
 export default connect(
   mapStateToProps
-  // mapDispatchToProps
 )(Results);

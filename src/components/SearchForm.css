@@ -1,7 +1,3 @@
-/* h3 {
-  margin: 1em 0.5em;
-} */
-
 .form-search {
   padding: 1em;
 }
@@ -37,13 +33,12 @@
   font-size: 1.2em;
   border: 1px solid lightgrey;
   padding: 0.35em 0.95em;
-  /* background: #7272ff; */
-  background: #007bff;
+  background: #006ce0;
   color: white
 }
 
 .btn.btn-submit:hover {
-  background: #006ce0;
+  background: #014691;
 }
 
 @media screen and (min-width: 768px){

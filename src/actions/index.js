@@ -15,7 +15,6 @@ export const updateQueries = text => ({
 
 export const fetchMovieResults = params => dispatch => {
   console.log('params in action',params);
-  // GET request (mock data)
   axios.post(`http://localhost:8000/api/get-movies/`, {
     params
   })
@@ -25,15 +24,10 @@ export const fetchMovieResults = params => dispatch => {
     payload: movies
   }));
 
-  // dispatch({
-  //   type: types.FETCH_MOVIE_RESULTS,
-  //   payload: {'status': 'received', 'data': params}
-  // });
-
 }
 
 export const fetchMovieGenres = () => dispatch => {
-  // Mock (until we get polling)
+  // Mock (until we get polling to work)
   dispatch({
     type: types.FETCH_MOVIE_GENRES,
     payload: [
@@ -43,16 +37,5 @@ export const fetchMovieGenres = () => dispatch => {
       // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'}
     ]
   });
-
-  // Works!
-  // axios.get('http://localhost:8000/api/get-movie-genres')
-  // .then((res) => {
-  //   console.log('res',res);
-  //   return res.data.genres;
-  // })
-  // .then((genres) => dispatch({
-  //   type: types.FETCH_MOVIE_GENRES,
-  //   payload: genres
-  // }));
 
 }
