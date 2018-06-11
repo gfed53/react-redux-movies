@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import './Results.css';
 
@@ -17,7 +18,7 @@ export const Results = props => {
           <p>{result.overview}</p>
         </div>
         <div className="col-sm-6 col-md-4 result-content-right">
-          <p>{result.release_date}</p>
+          <p>{moment(result.release_date,'YYYY-MM-DD').format('MMMM Do, YYYY')}</p>
           <p>Rating: {result.vote_average}</p>
           <p>Votes: {result.vote_count}</p>
         </div>
