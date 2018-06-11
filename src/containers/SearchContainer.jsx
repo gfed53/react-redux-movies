@@ -3,7 +3,7 @@ import { updateSearchBar, updateQueries, fetchMovieResults } from '../actions';
 import Search from '../components/Search';
 
 const mapStateToProps = state => {
-  console.log('movie results',state.movieResults);
+  // console.log('movie results',state.movieResults);
   return ({ 
     movieGenres: state.movieGenres
    })

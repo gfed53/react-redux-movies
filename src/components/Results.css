@@ -13,8 +13,13 @@
 }
 
 .result-image {
-  width: 10em;
+  width: 7.5em;
   box-shadow: 1px 1px 1px black;
+}
+
+.result-overview p {
+  text-align: center;
+  padding: 1.2em 0;
 }
 
 .result-content-right {
@@ -26,4 +31,20 @@
   font-style: italic;
   font-weight: bold;
   margin: 0.2em;
+}
+
+@media screen and (min-width: 350px){
+  .result-image {
+    width: 10em;
+  }
+
+  .result-overview p {
+    padding: 1.2em;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .result-overview p {
+    text-align: left;
+  }
 }
