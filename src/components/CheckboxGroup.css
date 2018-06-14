@@ -9,6 +9,8 @@
   padding: 0 1em;
 }
 
-input {
-  margin-right: 7px;
+.checkbox-group-item input {
+  position: relative;
+  /* top: 1px; */
+  margin-right: 5px;
 }

@@ -33,7 +33,7 @@
   margin: 0.2em;
 }
 
-@media screen and (min-width: 350px){
+@media screen and (min-width: 400px){
   .result-image {
     width: 10em;
   }

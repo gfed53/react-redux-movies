@@ -21,6 +21,9 @@
   width: 5em;
 }
 
+.date input {
+  border: 1px solid lightgrey;
+}
 
 
 .btn.btn-submit {
