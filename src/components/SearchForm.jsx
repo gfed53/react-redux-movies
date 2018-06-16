@@ -17,9 +17,9 @@ export const SearchForm = props => {
     <form className="form-search" onSubmit={handleSubmit}>
       <div className="row align-items-center justify-content-between dates-container">
         <div className="col-sm-6 col-md-3">
-          <h3>By Date:</h3>
+          <h3 className="form-header">By Date:</h3>
         </div>
-        <div className="col-sm-6 col-md-8">
+        <div className="col-sm-6 col-md-9">
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-4 col-lg-3 date">
               <label htmlFor="dateFrom">From:</label>
@@ -34,9 +34,9 @@ export const SearchForm = props => {
       </div>
       <div className="row align-items-center justify-content-between genres-container">
         <div className="col-sm-6 col-md-3">
-          <h3>By Genre:</h3>
+          <h3 className="form-header">By Genre:</h3>
         </div>
-        <div className="col-sm-6 col-md-8">
+        <div className="col-sm-6 col-md-9">
           <CheckboxGroup name="genres" options={genreOptions} />
         </div>
       </div>

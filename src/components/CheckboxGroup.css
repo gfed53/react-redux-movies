@@ -6,7 +6,7 @@
 
 .checkbox-group-item {
   display: block;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 
 .checkbox-group-item input {

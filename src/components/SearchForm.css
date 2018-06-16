@@ -2,9 +2,14 @@
   padding: 1em;
 }
 
+.form-header {
+  font-size: 1.4em;
+}
+
 .dates-container,
 .genres-container {
-  margin: 1em 0;
+  padding: 1.5em 0;
+  border-bottom: 1px solid lightgray;
 }
 
 .btn-container {
