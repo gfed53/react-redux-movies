@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './Search.css'
+import '../css/Search.css'
 
 import SearchFormContainer from '../containers/SearchFormContainer';
 

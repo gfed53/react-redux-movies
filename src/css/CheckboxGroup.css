@@ -1,0 +1,12 @@
+.checkbox-group-container {
+  display: flex;
+  flex-flow: row wrap; }
+
+.checkbox-group-item {
+  display: block;
+  padding: 0 0.5em; }
+
+.checkbox-group-item input {
+  position: relative;
+  /* top: 1px; */
+  margin-right: 5px; }

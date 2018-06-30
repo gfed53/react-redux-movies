@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import './Results.css';
+import '../css/Results.css';
 
 export const Results = props => {
 

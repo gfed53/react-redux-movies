@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 
 import CheckboxGroup from './CheckboxGroup.jsx';
 
-import './SearchForm.css';
+import '../css/SearchForm.css';
 
 export const SearchForm = props => {
   const { handleSubmit, genres } = props;

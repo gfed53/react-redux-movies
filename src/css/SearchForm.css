@@ -1,0 +1,44 @@
+.form-search {
+  padding: 1em; }
+
+.form-header {
+  font-size: 1.4em; }
+
+.dates-container,
+.genres-container {
+  padding: 1.5em 0;
+  border-bottom: 1px solid lightgray; }
+
+.btn-container {
+  text-align: right; }
+
+.date {
+  white-space: nowrap; }
+
+.date label {
+  display: inline-block;
+  margin-right: 1em;
+  width: 5em; }
+
+.date input {
+  border: 1px solid lightgrey; }
+
+.btn.btn-submit {
+  transition: .15s ease-in-out all;
+  margin: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  border: 1px solid lightgrey;
+  padding: 0.35em 0.95em;
+  background: #006ce0;
+  color: white; }
+
+.btn.btn-submit:hover {
+  background: #014691; }
+
+@media screen and (min-width: 768px) {
+  .date label {
+    width: auto; } }

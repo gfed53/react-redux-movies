@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {Field} from "redux-form";
 import PropTypes from 'prop-types';
 
-import './CheckboxGroup.css';
+import '../css/CheckboxGroup.css';
 
 export default class CheckboxGroup extends Component {
 
