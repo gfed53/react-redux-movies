@@ -5,8 +5,6 @@ import '../css/Results.css';
 
 export const Results = props => {
 
-  console.log('results props',props);
-
   const results = props.results.map(result => (
     <div key={result.id} className="result-main">
       <h4>{result.title}</h4>

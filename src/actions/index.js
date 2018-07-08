@@ -14,7 +14,6 @@ export const updateQueries = text => ({
 });
 
 export const fetchMovieResults = params => dispatch => {
-  console.log('params in action',params);
   axios.post(`http://localhost:8000/api/get-movies/`, {
     params
   })
@@ -27,23 +26,11 @@ export const fetchMovieResults = params => dispatch => {
 }
 
 export const fetchMovieGenres = () => dispatch => {
-  // Mock (until we get polling to work)
-  // dispatch({
-  //   type: types.FETCH_MOVIE_GENRES,
-  //   payload: [
-  //     {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'},
-  //     // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'},
-  //     // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'},
-  //     // {'id': 28, 'name': 'Action'}, {'id': 10749, 'name': 'Romance'}, {'id': 14, 'name': 'Fantasy'}
-  //   ]
-  // });
 
-  // Works!
+  // Working locally.
   axios.get('http://localhost:8000/api/get-movie-genres')
   .then((res) => {
-    console.log('res',res);
     return res.data.genres;
-    // return null;
   })
   .then((genres) => dispatch({
     type: types.FETCH_MOVIE_GENRES,

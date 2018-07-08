@@ -1,4 +1,4 @@
-// https://github.com/erikras/redux-form/issues/1037, user:kmsheng
+// based on: https://github.com/erikras/redux-form/issues/1037, user:kmsheng
 
 import React, {Component} from 'react';
 import {Field} from "redux-form";
