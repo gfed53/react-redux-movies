@@ -17,10 +17,11 @@ export const fetchMovieResults = params => dispatch => {
   axios.post(`http://localhost:8000/api/get-movies/`, {
     params
   })
-  .then((res) => res.data.tmdb_results.results)
-  .then((movies) => dispatch({
+  // .then((res) => res.data.tmdb_results.results)
+  .then((res) => res.data.tmdb_results)
+  .then((data) => dispatch({
     type: types.FETCH_MOVIE_RESULTS,
-    payload: movies
+    payload: data
   }));
 
 }

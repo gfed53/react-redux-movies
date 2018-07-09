@@ -22,10 +22,17 @@ export const Results = props => {
         </div>
       </div>
     </div>
-    ))
+    ));
+
+  const pageDisplay = props.results.length ? (
+    <div className="results--page-display">
+      <p>Page {props.page}</p>
+    </div>
+  ) : null;
 
   return (
     <div className="container results-container">
+      {pageDisplay}
       {results}
     </div>
   )

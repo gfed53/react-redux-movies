@@ -1,7 +1,11 @@
 import * as types from '../constants/ActionTypes';
 
 const initialState = {
-  movieResults: [],
+  movieResults: {
+    results: [],
+    page: null,
+    total_pages: null
+  },
   movieGenres: []
 }
 
@@ -9,7 +13,12 @@ export const movieResults = (state = initialState.movieResults, action) => {
   switch (action.type){
     // Just overwriting list of results for now, so we return completely new array of results.
     case types.FETCH_MOVIE_RESULTS:
-      return action.payload;
+      // return action.payload;
+      return {
+        results: action.payload.results,
+        page: action.payload.page,
+        total_pages: action.payload.total_pages
+      };
     default:
       return state;
   }
