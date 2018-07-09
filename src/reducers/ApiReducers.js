@@ -13,7 +13,6 @@ export const movieResults = (state = initialState.movieResults, action) => {
   switch (action.type){
     // Just overwriting list of results for now, so we return completely new array of results.
     case types.FETCH_MOVIE_RESULTS:
-      // return action.payload;
       return {
         results: action.payload.results,
         page: action.payload.page,

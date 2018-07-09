@@ -5,16 +5,21 @@ import * as types from '../constants/ActionTypes';
 import * as ApiReducers from './ApiReducers';
 
 const initialState = {
-  searchBarText: '',
-  
+  searchBarText: '', // Only used in initial phase of app, keeping for reference
   searchParams: {
     dateFrom: null,
     dateTo: null,
     selectedGenres: []
-  }
+  },
+  lastSearchParamsUsed: {
+    dateFrom: null,
+    dateTo: null,
+    selectedGenres: []
+  },
 }
 
 // Controls text within search bar.
+// Only used in initial phase of app, keeping for reference
 export const searchBarText = (state = '',action) => {
   switch (action.type){
     case types.UPDATE_SEARCH_BAR:
@@ -35,7 +40,12 @@ export const searchParams = (state = initialState.searchParams, action) => {
   }
 }
 
+export const lastSearchParamsUsed = (state = initialState.lastSearchParamsUsed, action) => {
+  // TODO
+}
+
 // Keeps track of previous searches.
+// Only used in initial phase of app, keeping for reference
 export const pastQueries = (state = [], action) => {
   switch (action.type){
     case types.UPDATE_QUERY_LIST:

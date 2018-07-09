@@ -13,7 +13,7 @@ import { fetchMovieGenres } from './actions';
 
 import {store} from './store/store';
 
-// Grab list of genres from API on startup. Mock results for now.
+// Grab list of genres from API on startup.
 store.dispatch(fetchMovieGenres());
 
 render(

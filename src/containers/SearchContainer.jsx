@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { updateSearchBar, updateQueries, fetchMovieResults } from '../actions';
+import { updateSearchBar, updateQueries, fetchMovieResults, setLastParams } from '../actions';
 import Search from '../components/Search';
 
 const mapStateToProps = state => {
