@@ -15,9 +15,10 @@ class Search extends Component {
     
   }
 
-  submit = values => {
-    console.log('values',values);
-    this.props.fetchMovieResults(values);
+  submit = params => {
+    // console.log('params',params);
+    this.props.fetchMovieResults(params);
+    this.props.setLastParams(params);
   }
 
   render() {

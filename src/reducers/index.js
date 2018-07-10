@@ -42,6 +42,12 @@ export const searchParams = (state = initialState.searchParams, action) => {
 
 export const lastSearchParamsUsed = (state = initialState.lastSearchParamsUsed, action) => {
   // TODO
+  switch (action.type){
+    case types.SET_LAST_PARAMS:
+      return action.payload;
+    default:
+      return state;
+  }
 }
 
 // Keeps track of previous searches.
@@ -59,5 +65,6 @@ export default combineReducers({
   form: formReducer,
   searchBarText,
   pastQueries,
+  lastSearchParamsUsed,
   ...ApiReducers
 });

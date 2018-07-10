@@ -42,6 +42,7 @@ export const fetchMovieGenres = () => dispatch => {
 }
 
 // The idea here is to, after a query, store the params object used in that query in a separate variable in our Redux store. This separate object (called lastSearchParamsUsed?) will be used when we want to toggle pages. We want to be completely isolated from any changes in the actual searchParams object. Hence, it will only be updated when we make a new original query (aka not switching between pages)
-export const setLastParams = params => dispatch => {
-  // TODO
-}
+export const setLastParams = params => ({
+  type: types.SET_LAST_PARAMS,
+  payload: params
+});
