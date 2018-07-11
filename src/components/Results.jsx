@@ -5,6 +5,18 @@ import '../css/Results.css';
 
 export const Results = props => {
 
+  const getPrevPage = () => {
+    console.log('getPrevPage');
+    const updatedParams = {...props.lastSearchParamsUsed, page: props.page - 1}
+    props.fetchMovieResults(updatedParams);
+  }
+
+  const getNextPage = () => {
+    console.log('getNextPage');
+    const updatedParams = {...props.lastSearchParamsUsed, page: props.page + 1}
+    props.fetchMovieResults(updatedParams);
+  }
+
   const results = props.results.map(result => (
     <div key={result.id} className="result-main">
       <h4>{result.title}</h4>
@@ -25,11 +37,11 @@ export const Results = props => {
     ));
 
   const buttonPrevPage = props.page > 1 ? (
-    <button className="btn btn-secondary">Previous</button>
+    <button className="btn btn-secondary" onClick={getPrevPage} >Previous</button>
   ) : null;
 
   const buttonNextPage = props.page < props.totalPages ? (
-    <button className="btn btn-secondary">Next</button>
+    <button className="btn btn-secondary" onClick={getNextPage}>Next</button>
   ) : null;
 
   const resultsView = props.results.length ? (

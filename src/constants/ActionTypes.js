@@ -12,3 +12,6 @@ export const FETCH_MOVIE_GENRES = 'FETCH_MOVIE_GENRES';
 
 export const SET_LAST_PARAMS = 'SET_LAST_PARAMS';
 
+export const INC_PAGE = 'INC_PAGE';
+export const DEC_PAGE = 'DEC_PAGE';
+

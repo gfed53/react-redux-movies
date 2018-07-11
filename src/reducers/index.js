@@ -16,6 +16,7 @@ const initialState = {
     dateTo: null,
     selectedGenres: []
   },
+  page: 1
 }
 
 // Controls text within search bar.
@@ -41,7 +42,6 @@ export const searchParams = (state = initialState.searchParams, action) => {
 }
 
 export const lastSearchParamsUsed = (state = initialState.lastSearchParamsUsed, action) => {
-  // TODO
   switch (action.type){
     case types.SET_LAST_PARAMS:
       return action.payload;
@@ -49,6 +49,19 @@ export const lastSearchParamsUsed = (state = initialState.lastSearchParamsUsed, 
       return state;
   }
 }
+
+// Can we create a reducer that updates only a part of an object that's being handled by another reducer?
+// For now, separating this variable as another prop in the state tree. 
+// export const page = (state = initialState.page, action) => {
+//   switch (action.type){
+//     case types.INC_PAGE:
+//       return state++;
+//     case types.DEC_PAGE:
+//       return state--;
+//     default:
+//       return state;
+//   }
+// }
 
 // Keeps track of previous searches.
 // Only used in initial phase of app, keeping for reference
