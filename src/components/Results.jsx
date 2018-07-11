@@ -24,16 +24,32 @@ export const Results = props => {
     </div>
     ));
 
-  const pageDisplay = props.results.length ? (
-    <div className="results--page-display">
-      <p>Page {props.page}</p>
-    </div>
+  const buttonPrevPage = props.page > 1 ? (
+    <button className="btn btn-secondary">Previous</button>
+  ) : null;
+
+  const buttonNextPage = props.page < props.totalPages ? (
+    <button className="btn btn-secondary">Next</button>
+  ) : null;
+
+  const resultsView = props.results.length ? (
+    <div className="container results--container">
+      <div className="results--page-display">
+        <p>Page {props.page}</p>
+      </div>
+      <div>
+        {results}
+      </div>
+      <div className="results--pagination">
+        {buttonPrevPage}
+        {buttonNextPage}
+      </div>
+    </div> 
   ) : null;
 
   return (
-    <div className="container results-container">
-      {pageDisplay}
-      {results}
+    <div>
+      {resultsView} 
     </div>
   )
 }

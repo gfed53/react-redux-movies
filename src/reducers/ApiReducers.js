@@ -4,7 +4,7 @@ const initialState = {
   movieResults: {
     results: [],
     page: null,
-    total_pages: null
+    totalPages: null
   },
   movieGenres: []
 }
@@ -16,7 +16,7 @@ export const movieResults = (state = initialState.movieResults, action) => {
       return {
         results: action.payload.results,
         page: action.payload.page,
-        total_pages: action.payload.total_pages
+        totalPages: action.payload.total_pages
       };
     default:
       return state;
