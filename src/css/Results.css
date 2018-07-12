@@ -2,11 +2,22 @@
   margin-top: 4em; }
 
 .results--page-display {
-  text-align: right; }
+  text-align: right;
+  padding: 0 1em; }
   .results--page-display p {
     font-size: 0.8em;
     font-style: italic;
     font-weight: bold; }
+
+.results--pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 1em 0; }
+  .results--pagination .container-button--page {
+    padding: 0 1em; }
+  .results--pagination .btn--icon {
+    vertical-align: top; }
 
 .result-main {
   margin: 3em 1em; }

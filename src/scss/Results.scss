@@ -4,10 +4,26 @@
 
 .results--page-display {
   text-align: right;
+  padding: 0 1em;
   p {
     font-size: 0.8em;
     font-style: italic;
     font-weight: bold;
+  }
+}
+
+.results--pagination {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 1em 0;
+
+  .container-button--page {
+    padding: 0 1em;
+  }
+
+  .btn--icon {
+    vertical-align: top;
   }
 }
 

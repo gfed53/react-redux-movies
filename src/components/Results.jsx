@@ -37,25 +37,34 @@ export const Results = props => {
     ));
 
   const buttonPrevPage = props.page > 1 ? (
-    <button className="btn btn-secondary" onClick={getPrevPage} >Previous</button>
+    <button className="btn btn-secondary" onClick={getPrevPage}><i class="material-icons btn--icon">navigate_before</i><span>Previous</span></button>
   ) : null;
 
   const buttonNextPage = props.page < props.totalPages ? (
-    <button className="btn btn-secondary" onClick={getNextPage}>Next</button>
+    <button className="btn btn-secondary" onClick={getNextPage}><span>Next</span><i class="material-icons btn--icon">navigate_next</i></button>
   ) : null;
+
+  const paginationSection = (
+    <div className="results--pagination">
+      <div className="container-button--page">
+        {buttonPrevPage}
+      </div>
+      <div className="container-button--page">
+        {buttonNextPage}
+      </div>
+    </div>
+  )
 
   const resultsView = props.results.length ? (
     <div className="container results--container">
       <div className="results--page-display">
         <p>Page {props.page}</p>
       </div>
+      {paginationSection}
       <div>
         {results}
       </div>
-      <div className="results--pagination">
-        {buttonPrevPage}
-        {buttonNextPage}
-      </div>
+      {paginationSection}
     </div> 
   ) : null;
 
