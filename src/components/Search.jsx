@@ -19,11 +19,17 @@ class Search extends Component {
     // console.log('params',params);
     this.props.fetchMovieResults(params);
     this.props.setLastParams(params);
+
+    // Vanilla DOM JS (temporary)
+    const resultsEl = document.getElementById('results');
+    console.log('resultsEl',resultsEl);
+    resultsEl.scrollIntoView();
   }
 
   render() {
     return (
       <section id="section-search">
+        <button className="btn btn-primary" onClick={this.props.testClick}>Test Button</button>
         <SearchFormContainer onSubmit={this.submit} />
       </section>
     );

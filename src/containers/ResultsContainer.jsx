@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchMovieResults } from '../actions';
 
-import { Results } from '../components/Results';
+import Results from '../components/Results';
 
 const mapStateToProps = state => ({
   results: state.movieResults.results,

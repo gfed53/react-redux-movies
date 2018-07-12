@@ -50,19 +50,6 @@ export const lastSearchParamsUsed = (state = initialState.lastSearchParamsUsed, 
   }
 }
 
-// Can we create a reducer that updates only a part of an object that's being handled by another reducer?
-// For now, separating this variable as another prop in the state tree. 
-// export const page = (state = initialState.page, action) => {
-//   switch (action.type){
-//     case types.INC_PAGE:
-//       return state++;
-//     case types.DEC_PAGE:
-//       return state--;
-//     default:
-//       return state;
-//   }
-// }
-
 // Keeps track of previous searches.
 // Only used in initial phase of app, keeping for reference
 export const pastQueries = (state = [], action) => {

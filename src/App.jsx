@@ -7,13 +7,22 @@ import ResultsContainer from './containers/ResultsContainer';
 
 class App extends Component {
 
+  constructor(props){
+    super(props);
+    this.testMethod = this.testMethod.bind(this);
+  }
+
+  testMethod() {
+    console.log('test from app');
+  }
+
   render() {
     return (
       <div className="container App">
         <header className="App-header">
           <h1>Search for movies!</h1>
         </header>
-        <SearchContainer />
+        <SearchContainer testClick={this.testMethod} />
         <ResultsContainer />
       </div>
     );
