@@ -10,11 +10,13 @@ export default class Results extends Component {
   }
 
   componentWillReceiveProps(nextProps){
+    console.log('nextProps',nextProps);
     console.log('componentWillReceiveProps');
     // Only if we end up having results
     if(nextProps.results.length){
       // Trigger a higher-level component method that will autoscroll to top of results container.
       console.log('should scroll to element');
+      this.props.scrollToResultsTop();
     }
   }
 
@@ -40,7 +42,7 @@ export default class Results extends Component {
         <h4>{result.title}</h4>
         <div className="row">
           <div className="col-6 col-md-3 order-1 order-md-1">
-            <img className="result-image" src={`https://image.tmdb.org/t/p/w500${result.poster_path}`} alt="movie image"/>
+            <img className="result-image" src={`https://image.tmdb.org/t/p/w500${result.poster_path}`} alt="movie"/>
           </div>
           <div className="col-12 col-md-6 order-3 order-md-2 result-overview">
             <p>{result.overview}</p>
