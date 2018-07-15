@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   scrollToResultsTop() {
-    console.log('test from app');
     setTimeout(() => { scrollToComponent(this.Results, { offset: 0, align: 'top', duration: 500}); },0); 
   }
 

@@ -3,18 +3,6 @@ import * as types from '../constants/ActionTypes';
 
 import * as ApiActions from './ApiActions';
 
-// Only used in initial phase of app, keeping for reference
-export const updateSearchBar = text => ({
-  type: types.UPDATE_SEARCH_BAR,
-  payload: text
-});
-
-// Only used in initial phase of app, keeping for reference
-export const updateQueries = text => ({
-  type: types.UPDATE_QUERY_LIST,
-  payload: text
-});
-
 export const fetchMovieResults = params => dispatch => {
   axios.post(`http://localhost:8000/api/get-movies/`, {
     params

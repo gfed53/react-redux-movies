@@ -10,29 +10,21 @@ export default class Results extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    console.log('nextProps',nextProps);
-    console.log('componentWillReceiveProps');
     // Only if we end up having results
     if(nextProps.results.length){
       // Trigger a higher-level component method that will autoscroll to top of results container.
-      console.log('should scroll to element');
       this.props.scrollToResultsTop();
     }
   }
 
-
   render(){
-
     const props = this.props;
-
     const getPrevPage = () => {
-      console.log('getPrevPage');
       const updatedParams = {...props.lastSearchParamsUsed, page: props.page - 1}
       props.fetchMovieResults(updatedParams);
     }
 
     const getNextPage = () => {
-      console.log('getNextPage');
       const updatedParams = {...props.lastSearchParamsUsed, page: props.page + 1}
       props.fetchMovieResults(updatedParams);
     }
