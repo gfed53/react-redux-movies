@@ -1,6 +1,7 @@
 .checkbox-group-container {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  max-width: 30em; }
 
 .checkbox-group-item {
   display: block;

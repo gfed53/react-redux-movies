@@ -5,10 +5,19 @@
 .results--page-display {
   text-align: right;
   padding: 0 1em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
   p {
-    font-size: 0.8em;
+    // font-size: 0.8em;
+    margin: 0;
     font-style: italic;
     font-weight: bold;
+    .badge-page {
+      vertical-align: sub;
+      font-size: 90%;
+      padding: 0.5em;
+    }
   }
 }
 

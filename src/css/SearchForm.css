@@ -21,7 +21,8 @@
   width: 5em; }
 
 .date input {
-  border: 1px solid lightgrey; }
+  border: 1px solid lightgrey;
+  padding: 0 0.35em; }
 
 .btn.btn-submit {
   transition: .15s ease-in-out all;
