@@ -23,11 +23,11 @@ export const SearchForm = props => {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-4 col-lg-3 date">
               <label htmlFor="dateFrom">From:</label>
-              <Field name="dateFrom" component="input" type="number" min="1900" max={yearNow} />
+              <Field name="dateFrom" component="input" className="form-control" type="number" min="1900" max={yearNow} />
             </div>
             <div className="col-sm-12 col-md-4 col-lg-3 date">
               <label htmlFor="dateTo">To:</label>
-              <Field name="dateTo" component="input" type="number" min="1900" max={yearNow} />
+              <Field name="dateTo" component="input" className="form-control" type="number" min="1900" max={yearNow} />
             </div>
           </div>
         </div>
@@ -38,6 +38,22 @@ export const SearchForm = props => {
         </div>
         <div className="col-sm-8 col-md-9">
           <CheckboxGroup name="genres" options={genreOptions} />
+        </div>
+      </div>
+      <div className="row align-items-center justify-content-between order-container">
+        <div className="col-sm-4 col-md-3">
+          <h3 className="form-header">Order:</h3>
+        </div>
+        <div className="col-sm-8 col-md-9">
+          <Field name="orderType" component="select" className="form-control order-select">
+            <option value="popularity">Popularity</option>
+            <option value="releaseDate">Release Date</option>
+            <option value="voteAvg">Vote Average</option>
+          </Field>
+          <Field name="orderDirection" component="select" className="form-control order-select">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </Field>
         </div>
       </div>
       <div className="btn-container">

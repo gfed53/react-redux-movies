@@ -5,7 +5,8 @@
   font-size: 1.4em; }
 
 .dates-container,
-.genres-container {
+.genres-container,
+.order-container {
   padding: 1.5em 0;
   border-bottom: 1px solid lightgray; }
 
@@ -23,6 +24,10 @@
 .date input {
   border: 1px solid lightgrey;
   padding: 0 0.35em; }
+
+.order-select {
+  margin: 0.5em;
+  display: inline-block; }
 
 .btn.btn-submit {
   transition: .15s ease-in-out all;
@@ -42,4 +47,6 @@
 
 @media screen and (min-width: 768px) {
   .date label {
-    width: auto; } }
+    width: auto; }
+  .order-select {
+    width: 10em; } }

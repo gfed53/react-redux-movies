@@ -7,7 +7,8 @@
 }
 
 .dates-container,
-.genres-container {
+.genres-container,
+.order-container {
   padding: 1.5em 0;
   border-bottom: 1px solid lightgray;
 }
@@ -29,6 +30,11 @@
 .date input {
   border: 1px solid lightgrey;
   padding: 0 0.35em;
+}
+
+.order-select {
+  margin: 0.5em;
+  display: inline-block;
 }
 
 
@@ -53,5 +59,9 @@
 @media screen and (min-width: 768px){
   .date label {
     width: auto;
+  }
+
+  .order-select {
+    width: 10em;
   }
 }
