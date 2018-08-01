@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field } from 'redux-form';
 
 import CheckboxGroup from './CheckboxGroup.jsx';
 
@@ -47,12 +47,13 @@ export const SearchForm = props => {
         <div className="col-sm-8 col-md-9">
           <Field name="orderType" component="select" className="form-control order-select">
             <option value="popularity">Popularity</option>
-            <option value="releaseDate">Release Date</option>
-            <option value="voteAvg">Vote Average</option>
+            <option value="primary_release_date">Release Date</option>
+            <option value="vote_average">Vote Average</option>
+            <option value="vote_count">Vote Count</option>
           </Field>
           <Field name="orderDirection" component="select" className="form-control order-select">
-            <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
+            <option value="asc">Ascending</option>
           </Field>
         </div>
       </div>

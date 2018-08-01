@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 
 import { fetchMovieResults } from '../actions';
 import { SearchForm } from '../components/SearchForm';

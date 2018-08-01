@@ -16,7 +16,7 @@ class Search extends Component {
   }
 
   submit = params => {
-    // console.log('params',params);
+    console.log('params',params);
     this.props.fetchMovieResults(params);
     this.props.setLastParams(params);
 
